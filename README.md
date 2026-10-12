@@ -1,340 +1,389 @@
-# DeFree 
+# DeFree — All-in-One Web3 Collaboration Platform
 
-## All-in-One Tech Collaboration Platform
+**DeFree** is a unified collaboration platform that brings freelancing, event management, and real-time community communication into one ecosystem. It combines traditional web technologies with blockchain-based payments and NFT ticketing to support collaboration between freelancers, clients, developers, startups, and communities.
 
-[![Demo](https://img.shields.io/badge/Live-Demo-green)](https://defree.vercel.app/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+<p align="center">
+  <a href="https://defree.vercel.app/">
+    <img src="https://img.shields.io/badge/Live-Demo-green?style=for-the-badge" alt="Live Demo">
+  </a>
+  <img src="https://img.shields.io/badge/Blockchain-Ethereum-blue?style=for-the-badge" alt="Ethereum">
+  <img src="https://img.shields.io/badge/Smart%20Contracts-Solidity-purple?style=for-the-badge" alt="Solidity">
+  <img src="https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge" alt="React">
+</p>
 
-
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org)
-[![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.28-blue)](https://docs.soliditylang.org/)
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=nishantharkut.DeFree)
-
-<img src="assets/defree logo2.png" alt="DeFree Logo" width="200" align="right" style="margin-left: 20px;"/>
-
-**DeFree** is a unified, Web3-enabled collaboration platform that brings together:
-
-- **Freelancing Marketplace**
-- **Event Management**
-- **Real-Time Community Chat**
-
-
-
-**DeFree** is a unified, Web3-enabled collaboration platform that brings together:
-
--  **Freelancing Marketplace**  
--  **Event Management**  
--  **Real-Time Community Chat**  
-
-## 🔒 Security Features
-
-- **Smart Contract Security**
-  - OpenZeppelin secure base contracts
-  - Comprehensive test coverage
-  - External audit planned
-
-- **Web Security**
-  - JWT authentication
-  - Rate limiting
-  - Input validation
-  - CORS protection
-
-- **Data Privacy**
-  - Encrypted storage
-  - Secure key management
-  - Regular backups
-
-## ⚡ Performance
-
-- **Frontend Optimization**
-  - Code splitting
-  - Lazy loading
-  - Asset optimization
-  - Caching strategies
-
-- **Backend Efficiency**
-  - Database indexing
-  - Query optimization
-  - Load balancing ready
-  - Caching layers
-
-- **Blockchain Integration**
-  - Optimized gas usage
-  - Batch transactions
-  - Event listeners
-  - Fallback providers
+<p align="center">
+  <a href="https://defree.vercel.app/">Live Demo</a> •
+  <a href="#key-features">Features</a> •
+  <a href="#technology-stack">Tech Stack</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#screenshots">Screenshots</a>
+</p>
 
 ---
 
-### DeFree lets startups, developers, and communities connect, collaborate, and transact seamlessly — on-chain or off-chain.
+## Table of Contents
 
----
+* [Overview](#overview)
+* [Key Features](#key-features)
+* [Technology Stack](#technology-stack)
+* [System Architecture](#system-architecture)
+* [Getting Started](#getting-started)
+* [Usage Workflows](#usage-workflows)
+* [Demo and Screenshots](#demo-and-screenshots)
+* [Security Considerations](#security-considerations)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Acknowledgements](#acknowledgements)
 
-##  Table of Contents
+## Overview
 
-1. [Key Features](#-key-features)  
-2. [Tech Stack](#-tech-stack)  
-3. [Architecture](#-architecture)
-4. [Prerequisites](#-prerequisites)
-5. [Getting Started](#-getting-started)  
-6. [Usage & Demo](#-usage--demo)  
-7. [Roadmap](#-roadmap)  
-8. [Contributing](#-contributing)  
-9. [License](#-license)  
+DeFree brings three major capabilities together:
 
----
+* **Freelancing Marketplace:** Enables clients to post gigs and freelancers to submit proposals, with blockchain-based escrow functionality.
+* **Event Management:** Supports event creation, registration, and NFT-based ticketing.
+* **Real-Time Community:** Provides communication through public and private channels, direct messages, and media sharing.
 
-##  Key Features
+The platform combines a React-based frontend, a Node.js backend, MongoDB, Socket.IO, and Ethereum smart contracts to support both on-chain and off-chain interactions.
 
-| Module                   | Description                                                                                   |
-|--------------------------|-----------------------------------------------------------------------------------------------|
-| **Freelancing**          | • Post & browse gigs<br>• Submit proposals & track status<br>• On-chain escrow smart contract |
-| **Event Management**     | • Create/manage events<br>• Register & mint NFT tickets<br>• Admin dashboard & reminders     |
-| **Community Chat**       | • Public & private channels<br>• 1:1 direct messaging<br>• Media sharing & history            |
-| **Web3 Integration**     | • MetaMask wallet login<br>• Escrow.sol for payments<br>• ERC-721 minting for tickets        |
+## Key Features
 
----
+| Module                  | Features                                                                                  |
+| ----------------------- | ----------------------------------------------------------------------------------------- |
+| Freelancing Marketplace | Post gigs, browse opportunities, submit proposals, and track proposal status.             |
+| Blockchain Payments     | Smart-contract-based escrow workflow for freelance transactions.                          |
+| Event Management        | Create events, manage registrations, and issue NFT tickets using ERC-721.                 |
+| Community Chat          | Real-time messaging, public and private channels, direct messages, and message history.   |
+| Web3 Integration        | MetaMask wallet connectivity and blockchain interactions.                                 |
+| User Profiles           | Manage user information and view relevant activity, subject to implemented functionality. |
 
-## Tech Stack
+## Technology Stack
 
-- **Frontend**  
-  - React + Typescript + Tailwind CSS  
-  - Framer Motion for animations  
-- **Backend**  
-  - Node.js + Express  
-  - MongoDB (Mongoose) for database
-- **Real-Time**  
-  - Socket.IO (WebSockets) for community chat
-- **Blockchain**  
-  - Solidity & Hardhat (local/testnet)
-  - Alchemy
-  - Ethers.js / Wagmi + MetaMask  
-- **Storage & Media**  
-  - Cloudinary [Planned]
-- **Deployment**  
-  - Vercel (frontend) & Render (backend)  
+| Layer                   | Technologies                                                      |
+| ----------------------- | ----------------------------------------------------------------- |
+| Frontend                | React, TypeScript, Tailwind CSS                                   |
+| UI and Animations       | Framer Motion                                                     |
+| Backend                 | Node.js, Express.js                                               |
+| Database                | MongoDB, Mongoose                                                 |
+| Real-Time Communication | Socket.IO, WebSockets                                             |
+| Smart Contracts         | Solidity, Hardhat                                                 |
+| Blockchain Integration  | Ethereum, Ethers.js, MetaMask, Alchemy                            |
+| Deployment              | Vercel for the frontend; Render for the backend, where configured |
+| Media Storage           | Cloudinary — planned, if not yet integrated                       |
 
----
+## System Architecture
 
-##  Architecture
-![architectureee](https://github.com/user-attachments/assets/5beace3e-b41d-4781-a68c-0a091d9b0cc3)
+The platform is organized into frontend, backend, database, real-time communication, and blockchain components.
 
----
+### Core Components
 
-### System Components
-- **Frontend**: React SPA with TypeScript and Tailwind CSS
-- **Backend**: RESTful API with Express, real-time WebSocket server
-- **Database**: MongoDB for user data, events, and transactions
-- **Blockchain**: Smart contracts for tickets and payments
-- **Storage**: IPFS for decentralized content storage
+* **Frontend:** React single-page application built with TypeScript and Tailwind CSS.
+* **Backend:** Express REST APIs for application functionality and server-side operations.
+* **Database:** MongoDB for application data, including users, events, and related records.
+* **Real-Time Layer:** Socket.IO for live messaging and communication.
+* **Blockchain Layer:** Solidity smart contracts for escrow transactions and NFT ticketing.
+* **Wallet Integration:** MetaMask for wallet connectivity and blockchain transactions.
 
----
+## Getting Started
 
-## 📋 Prerequisites
+Follow these steps to set up the project locally. The commands below assume the repository contains `client`, `server`, and `smart-contracts` directories. Adjust them if your actual folder structure differs.
 
-- Node.js >= 14.0.0
-- npm >= 6.14.0
-- MongoDB >= 4.4
-- MetaMask wallet
-- Git
+### Prerequisites
 
+Install the following tools before proceeding:
 
-##  Getting Started
+* Node.js and npm
+* Git
+* MongoDB or an accessible MongoDB database
+* MetaMask browser extension, for wallet-related features
+* A compatible Ethereum RPC endpoint, for blockchain functionality
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/yourusername/DeFree.git
-   cd DeFree
-   ```
-2. **Install dependencies**
-   ```bash
-    #Client
-    cd client && npm install
+Check your installed versions:
 
-    # Server
-    cd ../server && npm install
-   ```
-3. **Configure environment**
-   - Copy example.env to .env in both root dir, client/ and server/
-   - Set your MongoDB URI , MetaMask RPC endpoint, AWS/Cloudinary keys, etc.
-     
 ```bash
-  # --- Server ---
-  PORT= 8080
-  MONGO_URI="your MongoDb URI"
-  JWT_SECRET="your JWT secret"
-  SEPOLIA_RPC_URL="your sepolia url"
-  NFT_CONTRACT_ADDRESS="your contract address"
-  STRIPE_SECRET_KEY="your stripe secret key"
-  CLIENT_URL="your frontend ur"
-  
-  # --- Client ---
-  VITE_API_URL="your backend URL"
-  
-  # --- Root Folder ---
-  SEPOLIA_RPC_URL="your sepolia url"
-  PRIVATE_KEY="your escrow id"
-  MONGO_URI="your MongoDb URI"
-  NFT_CONTRACT_ADDRESS="your contract address"
-
+node --version
+npm --version
+git --version
 ```
-> ⚠️ **Security Notes**: 
-> - Never commit `.env` files to version control
-> - Use strong secrets for JWT_SECRET
-> - Keep your private keys secure
-> - Use test API keys for development
-   
-4. **Run locally**
 
-   ```bash
-    # Run backend
-    cd server && npm run dev
+### 1. Clone the Repository
 
-    # Run frontend
-    cd ../client && npm run dev
+Replace the placeholder URL with the actual repository URL.
 
-   #Run mint Listeners 
-   npx tsx events/listenMintEvents.ts
-   ```
-  
-   
-5. **(Optional) Deploy smart contracts**
-   ```bash
-    cd smart-contracts
-    npx hardhat run scripts/deploy.js --network localhost
-   ```
+```bash
+git clone <YOUR_REPOSITORY_URL>
+cd DeFree
+```
 
-##  Usage & Demo
+### 2. Install Dependencies
 
-###  Demo Video  
+Install the frontend and backend dependencies:
 
-https://github.com/user-attachments/assets/cc042158-d2ca-4e0d-b470-fcf282571fea
+```bash
+cd client
+npm install
 
----
+cd ../server
+npm install
+```
 
-###  **Screenshots**
+If the smart contracts are maintained in a separate directory, install their dependencies there as well:
+
+```bash
+cd ../smart-contracts
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create the necessary `.env` files in the directories expected by the application. Use the project's example environment files as the source of truth.
+
+Typical configuration variables may include:
+
+**Server environment**
+
+```dotenv
+PORT=8080
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_strong_jwt_secret
+CLIENT_URL=your_frontend_url
+SEPOLIA_RPC_URL=your_testnet_rpc_url
+NFT_CONTRACT_ADDRESS=your_nft_contract_address
+```
+
+**Client environment**
+
+```dotenv
+VITE_API_URL=your_backend_url
+```
+
+**Smart-contract deployment environment, if required**
+
+```dotenv
+SEPOLIA_RPC_URL=your_testnet_rpc_url
+PRIVATE_KEY=your_deployment_wallet_private_key
+```
+
+Only add variables that are actually used by your code. Configure additional payment-provider or media-storage variables only if those integrations are implemented.
+
+> **Security warning:** Never commit `.env` files, private keys, API secrets, or production credentials to GitHub. Keep local secrets out of notebook outputs, screenshots, and logs. Use a test wallet and testnet funds during development.
+
+### 4. Start the Application
+
+Start the backend in one terminal:
+
+```bash
+cd server
+npm run dev
+```
+
+Start the frontend in a second terminal:
+
+```bash
+cd client
+npm run dev
+```
+
+Run the blockchain event listener, if your project requires it, from the directory containing the listener script:
+
+```bash
+npx tsx events/listenMintEvents.ts
+```
+
+Confirm the listener's correct path and required environment variables before running this command.
+
+### 5. Deploy Smart Contracts (Optional)
+
+For local development, start a local Hardhat network if your deployment workflow requires one, then deploy the contracts using the project's configured script.
+
+```bash
+cd smart-contracts
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+Ensure the selected network, contract addresses, and RPC configuration match your local environment. Deployment scripts and filenames may differ by project version.
+
+## Usage Workflows
+
+### Freelancing Workflow
+
+1. Connect a wallet using MetaMask.
+2. Browse gigs or publish a new gig.
+3. Submit a proposal for an opportunity.
+4. Use the escrow workflow to deposit funds, where supported.
+5. Complete the work and follow the configured payment-release process.
+
+### Event Management Workflow
+
+1. Create an event.
+2. Register for an event.
+3. Mint or obtain an NFT ticket, where supported.
+4. View event information and manage attendee details.
+
+### Community Workflow
+
+1. Join a public or private channel.
+2. Send and receive real-time messages.
+3. Use direct messaging and media-sharing features where available.
+
+## Demo and Screenshots
+
+### Live Demo
+
+Explore the deployed application:
+
+**[Open DeFree](https://defree.vercel.app/)**
+
+### Demo Video
+
+Watch the project demonstration:
+
+[View Demo Video](https://github.com/user-attachments/assets/cc042158-d2ca-4e0d-b470-fcf282571fea)
+
+### Screenshots
 
 <table>
   <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/17a982d2-841d-44e7-b51e-f386fa15aa78" alt="Onboarding Page" width="350"/><br/>
-      <strong> Onboarding</strong><br/>
-      <span style="font-size: 0.8em; color: #666;">Wallet Connect & MetaMask Auth</span>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/17a982d2-841d-44e7-b51e-f386fa15aa78" alt="DeFree onboarding page" width="100%">
+      <br><strong>Onboarding</strong>
+      <br>Wallet connection and authentication
     </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/29869cd7-7629-4422-9cfe-08ae59e6105e" alt="Dashboard" width="350"/><br/>
-      <strong> Dashboard</strong><br/>
-      <span style="font-size: 0.8em; color: #666;">Your Gateway to Freelance, Events, and Chat</span>
-    </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/92e1a960-4fb3-47e9-bcab-a759449113fc" alt="Freelance Marketplace" width="350"/><br/>
-      <strong> Freelancing</strong><br/>
-      <span style="font-size: 0.8em; color: #666;">Post Gigs, Submit Proposals, Escrow ETH</span>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/29869cd7-7629-4422-9cfe-08ae59e6105e" alt="DeFree dashboard" width="100%">
+      <br><strong>Dashboard</strong>
+      <br>Access to freelancing, events, and community features
     </td>
   </tr>
   <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/017c7fd9-a1f0-4424-9106-baffb9f6cd98" alt="Event Management" width="350"/><br/>
-      <strong> Events</strong><br/>
-      <span style="font-size: 0.8em; color: #666;">Create Events & Mint NFT Tickets</span>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/92e1a960-4fb3-47e9-bcab-a759449113fc" alt="DeFree freelancing marketplace" width="100%">
+      <br><strong>Freelancing Marketplace</strong>
+      <br>Gigs, proposals, and escrow workflow
     </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/307a22cc-9cee-4713-b786-93fa46c0e959" alt="Community Chat" width="350"/><br/>
-      <strong> Community</strong><br/>
-      <span style="font-size: 0.8em; color: #666;">Real-time Global & Private Chat</span>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/017c7fd9-a1f0-4424-9106-baffb9f6cd98" alt="DeFree event management" width="100%">
+      <br><strong>Event Management</strong>
+      <br>Event creation and NFT ticketing
     </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/3272e54a-d922-4751-bb38-bf9b48fceae6" alt="Profile Page" width="350"/><br/>
-      <strong> Profile</strong><br/>
-      <span style="font-size: 0.8em; color: #666;">Track Proposals, Projects & Tickets</span>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/307a22cc-9cee-4713-b786-93fa46c0e959" alt="DeFree community chat" width="100%">
+      <br><strong>Community Chat</strong>
+      <br>Real-time community communication
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/3272e54a-d922-4751-bb38-bf9b48fceae6" alt="DeFree user profile page" width="100%">
+      <br><strong>User Profile</strong>
+      <br>User activity and profile information
     </td>
   </tr>
 </table>
 
+## Security Considerations
 
----
+Security is an important consideration for a platform handling user accounts, payments, and blockchain interactions.
 
-### User Flows
+The project includes or is designed around the following security measures; verify each against the current implementation before treating it as complete:
 
-### **Freelance Flow**
+* **Authentication:** JWT-based authentication.
+* **Input Handling:** Input validation for application requests.
+* **API Protection:** Rate limiting and CORS configuration, where implemented.
+* **Smart Contracts:** OpenZeppelin-based components where applicable, with testing for contract behavior.
+* **Secret Management:** Environment variables for sensitive configuration.
+* **Wallet Security:** Private keys should remain outside the frontend and source control.
 
-1. Connect MetaMask
-2. Post Gig
-3. Submit Proposal
-4. Deposit ETH in Escrow
-5. Deliver Work & Release Payment
+**Audit status:** An external smart-contract security audit was planned in the original project description. Do not describe the contracts as externally audited unless a completed audit report is available.
 
-### **Event Flow**
+## Performance and Reliability
 
-1. Create Event
-2. Register
-3. Mint NFT Ticket
-4. View/Manage Attendees
+Potential areas for optimization and future improvement include:
 
-### **Chat Flow**
+* Frontend code splitting and lazy loading.
+* Database indexing and query optimization.
+* Appropriate caching strategies.
+* Efficient blockchain event handling and RPC fallback configuration.
+* Smart-contract gas optimization and transaction error handling.
 
-1. Join Public/Private Channels
-2. Send Messages
-3. Share Files & Media
+These items should be marked as completed only after they have been implemented and tested.
 
----
+## Roadmap
 
-## 🛣️ Roadmap
+### Phase 1 — Core Platform
 
-### Phase 1: Core Platform (Completed ✅)
-- ✅ Web3 login with MetaMask integration
-- ✅ Freelance marketplace with escrow
-- ✅ Event management with NFT ticketing
-- ✅ Real-time community chat
+* [ ] Web3 wallet integration
+* [ ] Freelancing marketplace foundation
+* [ ] Event management and NFT ticketing foundation
+* [ ] Real-time community chat foundation
 
-### Phase 2: Enhanced Features (In Progress 🚀)
-- 🏗️ User profiles and reputation system
-- 🏗️ Advanced search and filtering
-- 🏗️ Admin analytics dashboard
-- 🏗️ Fast payments (Stripe/Razorpay)
+### Phase 2 — Feature Enhancements
 
-### Phase 3: Future Expansion (Planned 📋)
-- 📅 AI-powered gig recommendations
-- 📅 Mobile-responsive & PWA support
-- 📅 Multi-chain support
-- 📅 DAO governance implementation
+* [ ] User reputation system
+* [ ] Advanced search and filtering
+* [ ] Expanded administrative analytics
+* [ ] Payment-provider integration, such as Stripe or Razorpay, if required
 
-### Phase 4: Platform Scale (Upcoming 🔮)
-- 🎯 Enhanced security features
-- 🎯 Performance optimizations
-- 🎯 Advanced analytics
-- 🎯 Community governance
+### Phase 3 — Future Expansion
 
----
+* [ ] AI-powered gig recommendations
+* [ ] Progressive Web App (PWA) support
+* [ ] Multi-chain support
+* [ ] DAO governance
+
+### Phase 4 — Scale and Reliability
+
+* [ ] Additional security testing and independent review
+* [ ] Performance and scalability improvements
+* [ ] Expanded analytics and monitoring
+* [ ] Community governance enhancements
+
+> Update the roadmap to reflect the current state of the code. A feature should not be marked completed solely because it was planned or demonstrated in a mock-up.
 
 ## Contributing
 
-Please follow the Code of Conducts and Learn.md documentations properly.
-We welcome bug reports, feature requests, and pull requests!
+Contributions are welcome through bug reports, feature requests, and pull requests.
 
-1. Fork the repo
-2. Create your feature branch (`git checkout -b feature/AwesomeFeature`)
-3. Commit your changes (`git commit -m 'Add AwesomeFeature'`)
-4. Push to the branch (`git push origin feature/AwesomeFeature`)
-5. Open a Pull Request
+1. Fork the repository.
+
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. Commit your changes:
+
+   ```bash
+   git commit -m "Add your feature"
+   ```
+
+4. Push your branch:
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+5. Open a pull request describing your changes.
+
+Please review the project's contribution guidelines and documentation before contributing.
+
+## License
+
+This project states that it is licensed under the MIT License. See the [LICENSE](LICENSE) file for the full terms.
+
+## Acknowledgements
+
+Thanks to the developers and communities behind the technologies used in this project:
+
+* [OpenZeppelin](https://www.openzeppelin.com/) — smart-contract libraries
+* [Ethers.js](https://docs.ethers.org/) — Ethereum interaction library
+* [Socket.IO](https://socket.io/) — real-time communication
+* [Tailwind CSS](https://tailwindcss.com/) — styling framework
+* [Hardhat](https://hardhat.org/) — smart-contract development tools
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📫 Contact & Support
-
-- **Issues**: Use GitHub Issues for bugs and feature requests
-- **Discussions**: Join project discussions on GitHub
-
-## 🙏 Acknowledgments
-
-- [OpenZeppelin](https://www.openzeppelin.com/) for smart contract libraries
-- [Ethers.js](https://docs.ethers.org/) for blockchain interactions
-- [Socket.io](https://socket.io/) for real-time features
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Hardhat](https://hardhat.org/) for smart contract development
-
+<p align="center">
+  <strong>DeFree — Bringing freelancing, events, and communities together through Web3.</strong>
+</p>
